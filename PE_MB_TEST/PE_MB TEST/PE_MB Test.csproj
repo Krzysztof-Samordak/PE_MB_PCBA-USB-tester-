@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>PE_MB_TEST</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>3ShapeMonitorBoardTest</AssemblyName>
+    <Version> 1.0.0.0</Version>
+    <Company>3Shape A/S</Company>
+    <Copyright>Copyright 2022 3Shape A/S</Copyright>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Description>The “Monitor Board Test” is a Windows desktop application for testing of USB hub controller located on PCBA. The application for proper working needs the hardware tool: TESTING TOOL FOR MONITOR BOARD (10033409). 
+The program detect the USB hub controller located on PCBA and components connected to it:
+ – on PCBA - network adapter and sound controller
+- placed in tester’s hardware - the USB flash disk.
+</Description>
+    <AssemblyVersion></AssemblyVersion>
+    <FileVersion></FileVersion>
+    <PackageReadmeFile>README.txt</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="6.0.0" />
+    <PackageReference Include="ThreeShape.MSBuild.CodeCheck" Version="7.0.0-UpdateCodeCheckToLatestNugets.20220713193318">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
