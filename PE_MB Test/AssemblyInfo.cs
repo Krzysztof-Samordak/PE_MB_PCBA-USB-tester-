@@ -1,3 +1,4 @@
+/// <copyright>3Shape A/S</copyright>
 using System.Windows;
 using System.Reflection;
 

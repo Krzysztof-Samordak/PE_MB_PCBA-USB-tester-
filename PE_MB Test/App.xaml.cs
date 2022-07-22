@@ -1,4 +1,5 @@
-﻿using System;
+﻿/// <copyright>3Shape A/S</copyright>
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
