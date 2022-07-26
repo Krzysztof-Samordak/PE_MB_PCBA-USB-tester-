@@ -46,7 +46,7 @@ namespace PE_MB_Test
             if (givenVid_Pid.Length > 0 && givenVid_Pid.Contains("VID_") && GivenName.Length > 0)
             {
                 OnlyVid = givenVid_Pid.Substring(givenVid_Pid.IndexOf("VID_"), 8);
-                if (OnlyVid == expectedVidPid && GivenName == expectedName)
+                if (OnlyVid == expectedVidPid && GivenName.Contains(expectedName))
                 {
                     _vidPid = givenVid_Pid;
                     _isInserted = true;
