@@ -140,7 +140,7 @@ namespace PE_MB_Test
             }
             else if (hubController.InsertCheckIdAndName(Vid_Pid, Name))
             {
-                logger.log("PenDrive detected");
+                logger.log("HubController detected");
                 if (penDrive.checkIfInserted() && flashDisk.checkIfInserted())
                 {
                     USBControllerCheckBoxOn();
