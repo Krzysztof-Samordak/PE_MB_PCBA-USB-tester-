@@ -31,14 +31,14 @@ namespace PE_MB_Test
         void StartEventWatcher()
         {
             WqlEventQuery insertUSBQuery = new WqlEventQuery("SELECT * FROM __InstanceCreationEvent WITHIN 2 WHERE TargetInstance ISA " +
-                "'Win32_USBDevice'");
+                "'Win32_PnPEntity'");
             ManagementEventWatcher insertUSBWatcher = new ManagementEventWatcher(insertUSBQuery);
             insertUSBWatcher.EventArrived += new EventArrivedEventHandler(DeviceInsertedEvent);
             insertUSBWatcher.Start();
             logger.log("Detect of inserted device event started");
 
             WqlEventQuery removeUSBQuery = new WqlEventQuery("SELECT * FROM __InstanceDeletionEvent WITHIN 2 WHERE TargetInstance ISA " +
-                "'Win32_USBDevice'");
+                "'Win32_PnPEntity'");
             ManagementEventWatcher removeUSBWatcher = new ManagementEventWatcher(removeUSBQuery);
             removeUSBWatcher.EventArrived += new EventArrivedEventHandler(DeviceRemovedEvent);
             removeUSBWatcher.Start();
